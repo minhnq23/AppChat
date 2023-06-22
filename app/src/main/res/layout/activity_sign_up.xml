@@ -25,10 +25,12 @@
             android:layout_marginBottom="20dp"
             android:text="Create Account" />
         <FrameLayout
+            android:id="@+id/layoutImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp">
             <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/imageProfile"
                 android:layout_width="90dp"
                 android:layout_height="90dp"
                 android:scaleType="centerCrop"
@@ -36,6 +38,7 @@
                 app:riv_oval="true"
                 />
             <TextView
+                android:id="@+id/textAddImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Add image"
@@ -97,17 +100,27 @@
             android:inputType="textVisiblePassword"
             android:hint="Confirm Password" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_sign_in"
+        <FrameLayout
             android:layout_marginTop="30dp"
+            android:animateLayoutChanges="true"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:text="Sign up"
-            android:textColor="@color/blue_"
-            android:layout_marginHorizontal="30dp"
-            android:backgroundTint="#EDEDED"
-            app:cornerRadius="8dp"
-            />
+            android:layout_height="match_parent">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_sign_up"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Sign up"
+                android:textColor="@color/blue_"
+                android:layout_marginHorizontal="30dp"
+                android:backgroundTint="#EDEDED"
+                app:cornerRadius="8dp"
+                />
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_gravity="center"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+        </FrameLayout>
         <TextView
             android:id="@+id/textSignIn"
             android:layout_width="wrap_content"
